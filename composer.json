@@ -1,0 +1,63 @@
+{
+    "name": "flairuk/laravel-uber",
+    "description": "A Laravel client for the Uber APIs: rides, guest rides, Uber Direct deliveries, Uber Eats Marketplace and Uber for Business, with OAuth, cached app tokens and verified webhooks.",
+    "type": "library",
+    "license": "MIT",
+    "keywords": ["laravel", "uber", "uber-api", "rides", "uber-eats", "uber-direct", "deliveries", "uber-for-business", "oauth2", "webhooks", "api-client"],
+    "homepage": "https://github.com/FLAIRUK/laravel-uber",
+    "authors": [
+        {
+            "name": "Phil Graham",
+            "homepage": "https://github.com/ijeffro",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "illuminate/cache": "^12.0|^13.0",
+        "illuminate/collections": "^12.0|^13.0",
+        "illuminate/console": "^12.0|^13.0",
+        "illuminate/events": "^12.0|^13.0",
+        "illuminate/http": "^12.0|^13.0",
+        "illuminate/routing": "^12.0|^13.0",
+        "illuminate/support": "^12.0|^13.0"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.18",
+        "orchestra/testbench": "^10.0|^11.0",
+        "phpunit/phpunit": "^11.5|^12.0|^13.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "FLAIRUK\\Uber\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "FLAIRUK\\Uber\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "format": "pint"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "FLAIRUK\\Uber\\UberServiceProvider"
+            ],
+            "aliases": {
+                "Uber": "FLAIRUK\\Uber\\Facades\\Uber"
+            }
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "support": {
+        "source": "https://github.com/FLAIRUK/laravel-uber",
+        "issues": "https://github.com/FLAIRUK/laravel-uber/issues"
+    }
+}
